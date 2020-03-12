@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CalculVectorMovement : MonoBehaviour
 {
@@ -52,6 +53,12 @@ public class CalculVectorMovement : MonoBehaviour
         {
             Debug.Log(startPosition);
             Debug.Log(endPosition);
+            Invoke ("LoadGameScene", 1);
         }
+    }
+
+    private void LoadGameScene()
+    {
+        SceneManager.LoadScene(1);
     }
 }
