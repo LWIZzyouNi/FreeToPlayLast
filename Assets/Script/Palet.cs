@@ -13,6 +13,7 @@ public class Palet : MonoBehaviour
     void Start()
     {
         anim = GetComponent<Animator>();
+        PlayAnim();
     }
 
     // Update is called once per frame
