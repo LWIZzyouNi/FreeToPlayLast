@@ -18,7 +18,7 @@ public class GameManager : MonoBehaviour
 
     public static GameManager s_Singleton;
 
-    public float timer, resetTimer = 0f;
+    public float timer, resetTimer, timerMin = 0f;
     private TextMeshProUGUI TimerText;
     public GameObject timerTextObject;
 
@@ -77,17 +77,25 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        timer += Time.deltaTime;
-
         if (isWin == false)
         {
+            timer += Time.deltaTime;
+
             if (timer > 60)
             {
-                TimerText.text = timer.ToString(Mathf.Floor(timer / 60) + (" : ") + Mathf.RoundToInt(timer % 60));
+                timer = 0;
+                timerMin++;
             }
-            else if (timer < 60)
+            else if (timer < 60 && timerMin == 0)
             {
-                TimerText.text = timer.ToString("0");
+                int tmpsTimer = Mathf.FloorToInt(timer);
+                TimerText.text = tmpsTimer.ToString("0");
+            }
+            else if(timerMin > 0)
+            {
+                int tmpsTimer = Mathf.FloorToInt(timer);
+                string tmpsString = timerMin.ToString("0") + (" : ") + tmpsTimer.ToString("0");
+                TimerText.text = tmpsString;
             }
 
             InputCount.text = inputCountValue.ToString("0");
@@ -186,6 +194,7 @@ public class GameManager : MonoBehaviour
     void ResetTimer()
     {
         timer = resetTimer;
+        timerMin = resetTimer;
     }
 
     void Check ()

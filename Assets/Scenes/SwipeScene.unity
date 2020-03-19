@@ -601,7 +601,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.30024698, y: 0.78829384}
   m_AnchorMax: {x: 0.7024412, y: 0.883699}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: -23.087}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &134825024
@@ -668,7 +668,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: -1
+  m_firstOverflowCharacterIndex: 0
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
@@ -1100,6 +1100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   optionMenu: {fileID: 217624534}
+  animSwipeToPlay: {fileID: 0}
 --- !u!1 &291743974
 GameObject:
   m_ObjectHideFlags: 0
@@ -2056,6 +2057,7 @@ MonoBehaviour:
   listOfInstance: []
   timer: 0
   resetTimer: 0
+  timerMin: 0
   timerTextObject: {fileID: 1679917724}
   Victory: {fileID: 976634557}
   InputCount: {fileID: 134825024}
@@ -2157,7 +2159,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 72
+  m_fontSize: 35.75
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
