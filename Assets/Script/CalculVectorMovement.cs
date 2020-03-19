@@ -51,6 +51,7 @@ public class CalculVectorMovement : MonoBehaviour
     {
         if ((Vector2.Distance(startPosition, endPosition) > distanceToSwipe) && (delay > 0))
         {
+            UIManager.s_Singleton.DoAnimSwipeToLoad();
             Debug.Log(startPosition);
             Debug.Log(endPosition);
             Invoke ("LoadGameScene", 1);

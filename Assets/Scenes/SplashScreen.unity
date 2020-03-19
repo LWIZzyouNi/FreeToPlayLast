@@ -346,7 +346,7 @@ Animation:
   - {fileID: 7400000, guid: d297f86292b2c4242802ec496b855685, type: 2}
   - {fileID: 7400000, guid: c45130870063b2a489c7010056160dfd, type: 2}
   m_WrapMode: 0
-  m_PlayAutomatically: 1
+  m_PlayAutomatically: 0
   m_AnimatePhysics: 0
   m_CullingType: 0
 --- !u!1 &405687845
@@ -981,6 +981,7 @@ GameObject:
   - component: {fileID: 1123785238}
   - component: {fileID: 1123785237}
   - component: {fileID: 1123785236}
+  - component: {fileID: 1123785241}
   m_Layer: 5
   m_Name: UIManager
   m_TagString: Untagged
@@ -1089,6 +1090,20 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1123785241
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1123785235}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad01e277e33e5dd46a088f4bb92520dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  optionMenu: {fileID: 0}
+  animSwipeToPlay: {fileID: 277831975}
 --- !u!1 &1204838452
 GameObject:
   m_ObjectHideFlags: 0

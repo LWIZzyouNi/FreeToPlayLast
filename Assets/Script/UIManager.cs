@@ -5,6 +5,20 @@ using UnityEngine;
 public class UIManager : MonoBehaviour
 {
     public GameObject optionMenu;
+    public static UIManager s_Singleton;
+    public Animation animSwipeToPlay;
+
+    private void Awake()
+    {
+        if (s_Singleton != null)
+        {
+            Destroy(gameObject);
+        }
+        else
+        {
+            s_Singleton = this;
+        }
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -35,7 +49,11 @@ public class UIManager : MonoBehaviour
 
     public void OnClickRelancerButton()
     {
-        GameManager
-            .s_Singleton.LoadScene();
+        GameManager.s_Singleton.LoadScene();
+    }
+
+    public void DoAnimSwipeToLoad()
+    {
+        animSwipeToPlay.Play();
     }
 }
