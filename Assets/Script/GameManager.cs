@@ -27,6 +27,12 @@ public class GameManager : MonoBehaviour
     private int inputCountValue = 0;
     public TextMeshProUGUI InputCount;
 
+    public UIManager UI;
+
+    public GameObject victoryParticles;
+
+    public bool isPause = false;
+
 
     //private bool gameIsPlaying; 
 
@@ -223,6 +229,8 @@ public class GameManager : MonoBehaviour
         isWin = true;
         Victory.SetActive(true);
         SoundManager.sM_Singleton.PlaySound("Win");
+        UI.GetComponent<Animator>().SetTrigger("End");
+        victoryParticles.SetActive(true);
         Debug.Log("Win");
     }
 
